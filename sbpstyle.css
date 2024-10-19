@@ -282,6 +282,13 @@ nav a:hover {
 }
 
 
+.audio-player {
+    width: 100%; /* Make audio player responsive */
+    max-width: 600px; /* Optional: set a maximum width */
+    margin: 20px auto; /* Center the audio player */
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     nav {
         flex-direction: column; /* Stack nav items vertically */
@@ -307,6 +314,21 @@ nav a:hover {
     .footer {
         padding: 15px; /* Adjust footer padding */
     }
+
+    /* Adjustments for audio player controls */
+    #audio-player {
+        width: 100%; /* Full width for smaller screens */
+        height: 40px; /* Height adjustment */
+    }
+
+    #current-song {
+        font-size: 1.2em; /* Larger font size for better readability */
+        margin: 10px 0; /* Add some space */
+    }
+    .playlist ul{
+        flex-direction: column;
+        size: 19px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -317,7 +339,80 @@ nav a:hover {
     nav a {
         font-size: 1rem; /* Adjust link size */
     }
+
+    /* Further adjustments for audio player on very small screens */
+    #audio-player {
+        height: 35px; /* Smaller height for mobile */
+    }
+
+    #current-song {
+        font-size: 1em; /* Adjust font size */
+        margin: 5px 0; /* Less margin */
+    }
+
+    .playlist ul{
+        flex-direction: column;
+     
+    }
 }
+
+
+/* Style the audio player container */
+.playlist {
+    margin: 20px auto;
+    padding: 20px;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Style the audio player */
+#audio-player {
+    width: 100%;
+    max-width: 400px; /* Set a max width for the player */
+    margin: 20px auto;
+
+    outline: none; /* Remove the default outline */
+    background-color: transparent; /* Make background transparent */
+}
+
+/* Style the buttons in the playlist */
+.playlist ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin-bottom: -15rem;
+}
+
+.playlist li {
+    margin: 10px 0;
+}
+
+.playlist button {
+    padding: 10px 15px;
+    background-color: #b82930; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+.playlist button:hover {
+    background-color: #d72a2a; /* Darker shade on hover */
+}
+
+/* Style the playlist heading */
+.playlist h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
 
 
 
