@@ -69,7 +69,7 @@ function playSong(song, songName) {
     currentSongDisplay.textContent = `Currently Playing: ${songName}`;
 }
 
-// Automatically play the first song when the site opens
+
 window.onload = function() {
     playSong('song1.mp3', '48 - Relly Gunz');
 };
