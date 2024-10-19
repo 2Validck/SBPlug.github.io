@@ -72,7 +72,7 @@ nav a:hover {
 
 .hero {
     height: 80vh;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: url('Images/hero-bg.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,11 +84,6 @@ nav a:hover {
     padding: 20px;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-}
-
-.hero-content p {
-    margin-bottom: 13px;
-
 }
 
 .cta-button {
@@ -106,6 +101,7 @@ nav a:hover {
 .cta-button:hover {
     background-color: #d72a2a;
 }
+
 
 
 
