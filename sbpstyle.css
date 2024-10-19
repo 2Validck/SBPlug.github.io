@@ -19,9 +19,7 @@ html{
 
 body {
     font-family: var(--font);
-    background: var(--bg);
-    background-position: center;
-    background-size: contain; 
+    background: url("SBP.gif") no-repeat center center / cover; /* Adjusted this line */
     background-attachment: fixed;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
