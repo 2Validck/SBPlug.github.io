@@ -71,5 +71,5 @@ function playSong(song, songName) {
 
 
 window.onload = function() {
-    playSong('song5.mp3', 'Savior - NottiWorldRecords');
+    playSong(songs[currentSongIndex]);
 };
