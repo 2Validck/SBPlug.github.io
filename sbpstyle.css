@@ -87,7 +87,7 @@ nav a:hover {
 }
 
 .hero-content p {
-    margin-bottom: 8px;
+    margin-bottom: 13px;
 
 }
 
@@ -229,3 +229,40 @@ nav a:hover {
     font-size: 1.2rem;
 }
 
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    .hero {
+        height: 60vh; /* Adjust hero height for smaller screens */
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+
+    .cta-button {
+        font-size: 1em; /* Adjust button size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    .services-grid, .testimonial-grid, .stock-grid {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+
+    .footer {
+        padding: 15px; /* Adjust footer padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem; /* Adjust logo size */
+    }
+
+    nav a {
+        font-size: 1rem; /* Adjust link size */
+    }
+}
