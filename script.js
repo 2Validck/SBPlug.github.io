@@ -71,5 +71,5 @@ function playSong(song, songName) {
 
 
 window.onload = function() {
-    playSong(songs[currentSongIndex]);
+    playSong('song1.mp3', '48 - Relly Gunz')
 };
