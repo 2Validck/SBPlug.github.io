@@ -414,3 +414,43 @@ nav a:hover {
 
 
 
+#feedback-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+#feedback-form input,
+#feedback-form textarea {
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+}
+
+#feedback-form button {
+    padding: 10px 20px;
+    background-color: #b82930;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#feedback-form button:hover {
+    background-color: #d72a2a;
+}
+
+#feedback-status {
+    margin-top: 10px;
+    color: #29d8b7;
+}
+
+
+
