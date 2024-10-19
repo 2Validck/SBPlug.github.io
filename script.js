@@ -16,29 +16,29 @@ document.querySelectorAll('.scroll-link').forEach(link => {
 // Keep track of the current song index
 let currentSongIndex = 0;
 
-// List of songs in the playlist (updated to include only 7 songs)
+// List of songs and their names
 const songs = [
-    'song1.mp3',
-    'song2.mp3',
-    'song3.mp3',
-    'song4.mp3',
-    'song5.mp3',
-    'song6.mp3',
-    'song7.mp3',
-    'song8.mp3'
+    { file: 'song1.mp3', name: '48 - Relly Gunz' },
+    { file: 'song2.mp3', name: 'Breakin the Code - KR' },
+    { file: 'song3.mp3', name: 'Face of the What - Sha EK' },
+    { file: 'song4.mp3', name: 'Notti Bop - 41' },
+    { file: 'song5.mp3', name: 'Savior - NottiWorldRecords' },
+    { file: 'song6.mp3', name: 'See Red - Tata' },
+    { file: 'song7.mp3', name: 'Touch the Ground - Sha Ek' },
+    { file: 'song8.mp3', name: 'Many Men - Lee Drilly' }
 ];
 
 // Function to play a specific song
-
-
-
-function playSong(song, songName) {
+function playSong(songFile, songName) {
     const player = document.getElementById('audio-player');
     const source = document.getElementById('audio-source');
-    const currentSongDisplay = document.getElementById('current-song'); // Get the current song element
-    source.src = song;
+    const currentSongDisplay = document.getElementById('current-song');
+
+    source.src = songFile;
     player.load();
-    player.play();
+    player.play().catch((error) => {
+        console.error("Playback failed:", error);
+    });
 
     // Update the currently playing song display
     currentSongDisplay.textContent = `Currently Playing: ${songName}`;
@@ -46,7 +46,16 @@ function playSong(song, songName) {
 
 // Automatically play the first song when the site opens
 window.onload = function() {
-    playSong(songs[currentSongIndex]);
+    playSong(songs[currentSongIndex].file, songs[currentSongIndex].name);
+
+    // Set up event listener for when the current song ends
+    document.getElementById('audio-player').addEventListener('ended', function() {
+        currentSongIndex++;
+        if (currentSongIndex >= songs.length) {
+            currentSongIndex = 0; // Loop back to the first song
+        }
+        playSong(songs[currentSongIndex].file, songs[currentSongIndex].name); // Play the next song and update the display
+    });
 };
 
 
