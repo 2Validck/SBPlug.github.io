@@ -95,11 +95,13 @@ nav a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: .3s ease;
+    margin-top: 20px; /* Adjust this value for more or less space */
 }
 
 .cta-button:hover {
     background-color: #d72a2a;
 }
+
 
 
 
