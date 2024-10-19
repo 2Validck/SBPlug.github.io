@@ -200,3 +200,25 @@ nav a:hover {
     color: rgb(231, 63, 63);
     text-decoration: none;
 }
+
+
+
+
+
+.about-section {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
