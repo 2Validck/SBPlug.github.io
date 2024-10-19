@@ -24,7 +24,8 @@ const songs = [
     'song4.mp3',
     'song5.mp3',
     'song6.mp3',
-    'song7.mp3'
+    'song7.mp3',
+    'song8.mp3'
 ];
 
 // Function to play a specific song
