@@ -135,6 +135,22 @@ nav a:hover {
 }
 
 
+.cta-button {
+    padding: 10px 20px;
+    background-color: #b82930;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d72a2a;
+}
+
+
 
 .services {
     padding: 50px;
