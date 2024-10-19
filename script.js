@@ -1,22 +1,22 @@
 document.querySelectorAll('.scroll-link').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault(); 
-        const targetId = this.getAttribute('href'); 
-        const targetSection = document.querySelector(targetId); 
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetId = this.getAttribute('href'); // Get the href attribute
+        const targetSection = document.querySelector(targetId); // Find the target section
 
-
+        // Scroll smoothly to the target section
         targetSection.scrollIntoView({ behavior: 'smooth' });
 
-
-        history.pushState(null, null, 'https://2validck.github.io/SBPlug.github.io/'); 
+        // Update the URL without the hash
+        history.pushState(null, null, 'https://2validck.github.io/SBPlug.github.io/'); // Change this to your actual file name if different
     });
 });
 
-// Keep track of the current song index
 
+// Keep track of the current song index
 let currentSongIndex = 0;
 
-// List of songs in the playlist 
+// List of songs in the playlist (updated to include only 7 songs)
 const songs = [
     'song1.mp3',
     'song2.mp3',
@@ -65,11 +65,64 @@ function playSong(song, songName) {
     player.load();
     player.play();
 
-    // Update the currently playing song display
+    
     currentSongDisplay.textContent = `Currently Playing: ${songName}`;
 }
 
-
+// Automatically play the first song when the site opens
 window.onload = function() {
-    playSong('song1.mp3', '48 - Relly Gunz')
+    playSong('song1.mp3', '48 - Relly Gunz');
 };
+
+
+document.getElementById('feedback-form').addEventListener('submit', function (e) {
+    e.preventDefault(); 
+
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('feedback-message').value;
+    const webhookURL = ${{ secrets.DISCORD_WEBHOOK_URL }};
+
+    
+    const payload = {
+        embeds: [{
+            title: "New Feedback Received",
+            color: 15158332, 
+            fields: [
+                {
+                    name: "Discord User",
+                    value: name,
+                    inline: true
+                },
+                {
+                    name: "Message",
+                    value: message,
+                    inline: false
+                }
+            ],
+            footer: {
+                text: "South Bronx's Plugs",
+            },
+            timestamp: new Date()
+        }]
+    };
+
+    
+    fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(response => {
+        if (response.ok) {
+            document.getElementById('feedback-status').textContent = 'Thank you for your feedback!';
+            document.getElementById('feedback-form').reset(); 
+        } else {
+            document.getElementById('feedback-status').textContent = 'Failed to send feedback. Try again later.';
+        }
+    })
+    .catch(error => {
+        document.getElementById('feedback-status').textContent = 'Error: ' + error.message;
+    });
+});
