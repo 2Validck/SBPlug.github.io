@@ -20,6 +20,26 @@
 
     </header>
     <div class="container">
+     <section class="playlist">
+            <h2>Music</h2>
+            <audio id="audio-player" controls>
+                <source id="audio-source" src="song1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div id="current-song" style="color: white; margin-top: 10px;">Currently Playing: Song 1</div> <!-- New Element -->
+            <ul>
+                <li><button onclick="playSong('song1.mp3', '48 - Relly Gunz')">Song 1</button></li>
+                <li><button onclick="playSong('song2.mp3', 'Breakin the Code - KR')">Song 2</button></li>
+                <li><button onclick="playSong('song3.mp3', 'Face of the What - Sha EK')">Song 3</button></li>
+                <li><button onclick="playSong('song4.mp3', 'Notti Bop- 41')">Song 4</button></li>
+                <li><button onclick="playSong('song5.mp3', 'Savior - NottiWorldRecords')">Song 5</button></li>
+                <li><button onclick="playSong('song6.mp3', 'See Red - Tata ')">Song 6</button></li>
+                <li><button onclick="playSong('song7.mp3', 'Touch the ground - Sha Ek')">Song 7</button></li>
+            </ul>
+        </section>
+
+
+        
     <section class="hero">
             <div class="hero-content">
                 <h1>Welcome to SBP</h1>
