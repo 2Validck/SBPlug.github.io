@@ -72,7 +72,6 @@ nav a:hover {
 
 .hero {
     height: 80vh;
-    background: url('Images/hero-bg.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,6 +83,40 @@ nav a:hover {
     padding: 20px;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
+    
+}
+
+.hero-content{
+    max-width: 500px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+    pointer-events: none; 
+    user-select: none;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+.hero-content a {
+    color: white;
+    text-decoration: none;
+    transition: all .3s ease;
+    user-select: none;
+}
+
+.hero-content a:hover{
+    color: black;
+    transform: scale(1.2);
+    text-decoration: underline;
 }
 
 .cta-button {
@@ -100,8 +133,6 @@ nav a:hover {
 .cta-button:hover {
     background-color: #d72a2a;
 }
-
-
 
 
 
