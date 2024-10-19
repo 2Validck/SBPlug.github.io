@@ -86,7 +86,10 @@ nav a:hover {
     border-radius: 10px;
 }
 
+.hero-content p {
+    margin-bottom: 8px;
 
+}
 
 .cta-button {
     padding: 10px 20px;
