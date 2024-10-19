@@ -3,7 +3,7 @@
 :root{
     --font: Poppins, 'sans-serif';
     --nav-clr: #f6f6f644;
-    --bg: url("Images/SBP.gif")
+    --bg: url("SBP.gif")
 }
 
 html{
@@ -74,7 +74,7 @@ nav a:hover {
 
 .hero {
     height: 80vh;
-    background: url('Images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
