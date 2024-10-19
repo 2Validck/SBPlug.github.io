@@ -1,19 +1,22 @@
 document.querySelectorAll('.scroll-link').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default anchor behavior
-        const targetId = this.getAttribute('href'); // Get the href attribute
-        const targetSection = document.querySelector(targetId); // Find the target section
+        e.preventDefault(); 
+        const targetId = this.getAttribute('href'); 
+        const targetSection = document.querySelector(targetId); 
 
-        // Scroll smoothly to the target section
+        
         targetSection.scrollIntoView({ behavior: 'smooth' });
 
-        // Update the URL without the hash
-        history.pushState(null, null, 'https://2validck.github.io/SBPlug.github.io/'); // Change this to your actual file name if different
+        
+        history.pushState(null, null, 'https://2validck.github.io/SBPlug.github.io/'); 
     });
 });
 
+
+
 let currentSongIndex = 0;
 
+// List of songs and their names
 const songs = [
     { file: 'song9.mp3', name: '4100 One Mic Cypher - KR, Jenn Carter, Jah Woo' },
     { file: 'song1.mp3', name: '48 - Relly Gunz' },
@@ -28,8 +31,9 @@ const songs = [
 
 ];
 
-// Keep track of the current song index
-= document.getElementById('audio-player');
+
+function playSong(songFile, songName) {
+    const player = document.getElementById('audio-player');
     const source = document.getElementById('audio-source');
     const currentSongDisplay = document.getElementById('current-song');
 
@@ -39,23 +43,25 @@ const songs = [
         console.error("Playback failed:", error);
     });
 
-    // Update the currently playing song display
+
     currentSongDisplay.textContent = `Currently Playing: ${songName}`;
 }
 
-// Automatically play the first song when the site opens
+
 window.onload = function() {
     playSong(songs[currentSongIndex].file, songs[currentSongIndex].name);
 
-    // Set up event listener for when the current song ends
+
     document.getElementById('audio-player').addEventListener('ended', function() {
         currentSongIndex++;
         if (currentSongIndex >= songs.length) {
-            currentSongIndex = 0; // Loop back to the first song
+            currentSongIndex = 0; 
         }
         playSong(songs[currentSongIndex].file, songs[currentSongIndex].name); 
     });
 };
+
+
 
 
 document.getElementById('feedback-form').addEventListener('submit', function (e) {
@@ -64,7 +70,6 @@ document.getElementById('feedback-form').addEventListener('submit', function (e)
     const name = document.getElementById('name').value;
     const message = document.getElementById('feedback-message').value;
     const webhookURL = 'https://discord.com/api/webhooks/1297253209995477014/3HQpwrDkh-Q3TSqbBkhvw5Pxbq0kZxp2BTgBIwtWlBUe81mStsFoskbS2LyjKMXwDxt_'; 
-
 
     
     const payload = {
@@ -90,7 +95,7 @@ document.getElementById('feedback-form').addEventListener('submit', function (e)
         }]
     };
 
-    
+    // Send the request using fetch
     fetch(webhookURL, {
         method: 'POST',
         headers: {
@@ -101,7 +106,7 @@ document.getElementById('feedback-form').addEventListener('submit', function (e)
     .then(response => {
         if (response.ok) {
             document.getElementById('feedback-status').textContent = 'Thank you for your feedback!';
-            document.getElementById('feedback-form').reset(); 
+            document.getElementById('feedback-form').reset(); // Reset the form fields
         } else {
             document.getElementById('feedback-status').textContent = 'Failed to send feedback. Try again later.';
         }
