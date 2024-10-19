@@ -80,7 +80,8 @@ document.getElementById('feedback-form').addEventListener('submit', function (e)
 
     const name = document.getElementById('name').value;
     const message = document.getElementById('feedback-message').value;
-    const webhookURL = ${{ secrets.DISCORD_WEBHOOK_URL }};
+    const webhookURL = 'https://discord.com/api/webhooks/1297253209995477014/3HQpwrDkh-Q3TSqbBkhvw5Pxbq0kZxp2BTgBIwtWlBUe81mStsFoskbS2LyjKMXwDxt_'; 
+
 
     
     const payload = {
