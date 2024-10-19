@@ -412,15 +412,6 @@ nav a:hover {
     font-size: 1.8rem;
 }
 
-.feedback {
-    padding: 50px;
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
 #feedback-form{
     display: flex;
     flex-direction: column;
@@ -458,6 +449,7 @@ nav a:hover {
     margin-top: 10px;
     color: #29d8b7;
 }
+
 
 
 
