@@ -95,7 +95,6 @@ nav a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: .3s ease;
-    margin-top: 20px; 
 }
 
 .cta-button:hover {
