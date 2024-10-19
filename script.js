@@ -46,7 +46,7 @@ function playSong(song, songName) {
 
 // Automatically play the first song when the site opens
 window.onload = function() {
-    playSong('song5.mp3', 'Savior - NottiWorldRecords');
+    playSong(songs[currentSongIndex]);
 };
 
 
