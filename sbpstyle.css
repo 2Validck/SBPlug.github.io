@@ -234,21 +234,31 @@ nav a:hover {
     padding: 20px;
 }
 
-.footer .social-icons img {
-    width: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s;
+.footer .social-icons{
+    color: rgb(231, 63, 63);
+    text-decoration: none;
+    transition: .3s ease;
 }
 
-.footer .social-icons img:hover {
+.footer .social-icons a{
+    color:rgb(231, 63, 63);
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.footer .social-icons:hover{
     transform: scale(1.1);
 }
 
 
-.social-icons a{
-    color: rgb(231, 63, 63);
-    text-decoration: none;
+.footer .social-icons a:hover {
+    transform: scale(1.1);
+    color: white;
+    text-shadow: 0 0 30px white;
 }
+
+
+
 
 
 
@@ -308,3 +318,7 @@ nav a:hover {
         font-size: 1rem; /* Adjust link size */
     }
 }
+
+
+
+
