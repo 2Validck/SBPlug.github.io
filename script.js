@@ -71,5 +71,5 @@ function playSong(song, songName) {
 
 
 window.onload = function() {
-    playSong('song1.mp3', '48 - Relly Gunz');
+    playSong('song5.mp3', 'Savior - NottiWorldRecords');
 };
