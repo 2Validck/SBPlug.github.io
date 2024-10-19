@@ -359,59 +359,58 @@ nav a:hover {
 
 
 .playlist {
-    margin: 20px auto;
-    padding: 20px;
-
-    border-radius: 10px;
-    text-align: center;
+    margin: 20px auto;               /* Center the playlist */
+    padding: 15px;                   /* Reduced padding */
+    border-radius: 10px;             /* Rounded corners */
+    text-align: center;              /* Center text */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    width: 90%;                      /* Responsive width */
+    max-width: 500px;               /* Max width for larger screens */
+    overflow: hidden;                /* Hide overflow */
 }
 
-
-#audio-player {
-    width: 100%;
-    max-width: 400px; 
-    margin: 20px auto;
-    outline: none; 
-    background-color: transparent; 
-}
-
-
+/* Style the buttons in the playlist */
 .playlist ul {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    list-style: none;
-    padding: 0;
-    margin-bottom: -15rem;
+    display: flex;                   /* Use flexbox for horizontal layout */
+    flex-wrap: wrap;                /* Enable wrapping of buttons */
+    justify-content: center;         /* Center items */
+    gap: 1rem;                      /* Reduced gap between items */
+    list-style: none;               /* Remove list bullets */
+    padding: 0;                     /* Remove padding */
+    margin: 0;                      /* Remove margin */
 }
 
 .playlist li {
-    margin: 10px 0;
+    margin: 5px 0;                  /* Reduced margin */
 }
 
 .playlist button {
-    padding: 10px 15px;
-    background-color: #b82930; 
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 8px 12px;              /* Consistent button padding */
+    background-color: #b82930;      /* Button color */
+    color: white;                   /* Text color */
+    border: none;                   /* No border */
+    border-radius: 5px;            /* Rounded corners */
+    font-size: 0.9rem;              /* Consistent font size */
+    cursor: pointer;                /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change */
+    min-width: 100px;               /* Set a minimum width for buttons */
+    max-width: 150px;               /* Optional: set a maximum width */
+    flex-grow: 1;                   /* Allow buttons to grow */
+    flex-basis: calc(33% - 1rem);  /* Each button takes a third of the space minus gap */
+    box-sizing: border-box;         /* Ensure padding is included in width */
 }
 
 /* Hover effect for buttons */
 .playlist button:hover {
-    background-color: #d72a2a; 
+    background-color: #d72a2a;      /* Darker shade on hover */
 }
 
-
+/* Style the playlist heading */
 .playlist h2 {
-    color: white;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+    color: white;                   /* Text color */
+    margin-bottom: 10px;           /* Reduced bottom margin */
+    font-size: 1.5rem;              /* Smaller heading size */
 }
-
 
 .feedback {
     padding: 50px;
