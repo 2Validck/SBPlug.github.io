@@ -283,19 +283,19 @@ nav a:hover {
 
 
 .audio-player {
-    width: 100%; /* Make audio player responsive */
-    max-width: 600px; /* Optional: set a maximum width */
-    margin: 20px auto; /* Center the audio player */
+    width: 100%; 
+    max-width: 600px; 
+    margin: 20px auto; 
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* Stack nav items vertically */
+        flex-direction: column; 
     }
 
     .hero {
-        height: 60vh; /* Adjust hero height for smaller screens */
+        height: 60vh;
     }
 
     .hero-content {
@@ -303,27 +303,27 @@ nav a:hover {
     }
 
     .cta-button {
-        font-size: 1em; /* Adjust button size */
-        padding: 8px 16px; /* Adjust padding */
+        font-size: 1em;
+        padding: 8px 16px; 
     }
 
     .services-grid, .testimonial-grid, .stock-grid {
-        grid-template-columns: 1fr; /* Stack items on smaller screens */
+        grid-template-columns: 1fr; 
     }
 
     .footer {
-        padding: 15px; /* Adjust footer padding */
+        padding: 15px; 
     }
 
-    /* Adjustments for audio player controls */
+    
     #audio-player {
-        width: 100%; /* Full width for smaller screens */
-        height: 40px; /* Height adjustment */
+        width: 100%; 
+        height: 40px; 
     }
 
     #current-song {
-        font-size: 1.2em; /* Larger font size for better readability */
-        margin: 10px 0; /* Add some space */
+        font-size: 1.2em; 
+        margin: 10px 0; 
     }
     .playlist ul{
         flex-direction: column;
@@ -333,21 +333,21 @@ nav a:hover {
 
 @media (max-width: 480px) {
     .logo {
-        font-size: 1.5rem; /* Adjust logo size */
+        font-size: 1.5rem; 
     }
 
     nav a {
-        font-size: 1rem; /* Adjust link size */
+        font-size: 1rem; 
     }
 
-    /* Further adjustments for audio player on very small screens */
+   
     #audio-player {
-        height: 35px; /* Smaller height for mobile */
+        height: 35px; 
     }
 
     #current-song {
-        font-size: 1em; /* Adjust font size */
-        margin: 5px 0; /* Less margin */
+        font-size: 1em; 
+        margin: 5px 0; 
     }
 
     .playlist ul{
@@ -357,7 +357,7 @@ nav a:hover {
 }
 
 
-/* Style the audio player container */
+
 .playlist {
     margin: 20px auto;
     padding: 20px;
@@ -366,17 +366,16 @@ nav a:hover {
     text-align: center;
 }
 
-/* Style the audio player */
+
 #audio-player {
     width: 100%;
-    max-width: 400px; /* Set a max width for the player */
+    max-width: 400px; 
     margin: 20px auto;
-
-    outline: none; /* Remove the default outline */
-    background-color: transparent; /* Make background transparent */
+    outline: none; 
+    background-color: transparent; 
 }
 
-/* Style the buttons in the playlist */
+
 .playlist ul {
     display: flex;
     justify-content: center;
@@ -392,7 +391,7 @@ nav a:hover {
 
 .playlist button {
     padding: 10px 15px;
-    background-color: #b82930; /* Button color */
+    background-color: #b82930; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -403,10 +402,10 @@ nav a:hover {
 
 /* Hover effect for buttons */
 .playlist button:hover {
-    background-color: #d72a2a; /* Darker shade on hover */
+    background-color: #d72a2a; 
 }
 
-/* Style the playlist heading */
+
 .playlist h2 {
     color: white;
     margin-bottom: 20px;
