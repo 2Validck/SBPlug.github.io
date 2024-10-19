@@ -461,4 +461,14 @@ nav a:hover {
 
 
 
+.hero-content #mail {
+    color: #b82930;                     /* Link color */
+    text-decoration: none;              /* Remove underline from links */
+    transition: color 0.3s;             /* Smooth transition for hover effect */
+}
+
+.hero-content #mail:hover {
+    color: #d72a2a;                     /* Darker link color on hover */
+}
+
 
