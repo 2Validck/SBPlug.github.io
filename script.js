@@ -29,33 +29,7 @@ const songs = [
 ];
 
 // Function to play a specific song
-function playSong(song) {
-    const player = document.getElementById('audio-player');
-    const source = document.getElementById('audio-source');
-    
-    source.src = song;
-    player.load();
-    player.play();
-    
-    // Update the current song index
-    currentSongIndex = songs.indexOf(song);
-}
 
-// Event listener to play the next song when the current one ends
-document.getElementById('audio-player').addEventListener('ended', function() {
-    currentSongIndex++; // Move to the next song
-
-    if (currentSongIndex >= songs.length) {
-        currentSongIndex = 0; // Loop back to the first song
-    }
-
-    playSong(songs[currentSongIndex]); // Play the next song
-});
-
-// Initialize the player to play the first song when the page loads
-window.onload = function() {
-    playSong(songs[currentSongIndex]); // Start with the first song
-};
 
 
 function playSong(song, songName) {
@@ -66,13 +40,13 @@ function playSong(song, songName) {
     player.load();
     player.play();
 
-    
+    // Update the currently playing song display
     currentSongDisplay.textContent = `Currently Playing: ${songName}`;
 }
 
 // Automatically play the first song when the site opens
 window.onload = function() {
-    playSong('song1.mp3', '48 - Relly Gunz');
+    playSong('song5.mp3', 'Savior - NottiWorldRecords');
 };
 
 
