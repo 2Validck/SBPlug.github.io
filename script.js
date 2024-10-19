@@ -14,23 +14,7 @@ document.querySelectorAll('.scroll-link').forEach(link => {
 
 
 // Keep track of the current song index
-let currentSongIndex = 0;
-
-// List of songs and their names
-const songs = [
-    { file: 'song1.mp3', name: '48 - Relly Gunz' },
-    { file: 'song2.mp3', name: 'Breakin the Code - KR' },
-    { file: 'song3.mp3', name: 'Face of the What - Sha EK' },
-    { file: 'song4.mp3', name: 'Notti Bop - 41' },
-    { file: 'song5.mp3', name: 'Savior - NottiWorldRecords' },
-    { file: 'song6.mp3', name: 'See Red - Tata' },
-    { file: 'song7.mp3', name: 'Touch the Ground - Sha Ek' },
-    { file: 'song8.mp3', name: 'Many Men - Lee Drilly' }
-];
-
-// Function to play a specific song
-function playSong(songFile, songName) {
-    const player = document.getElementById('audio-player');
+= document.getElementById('audio-player');
     const source = document.getElementById('audio-source');
     const currentSongDisplay = document.getElementById('current-song');
 
@@ -54,7 +38,7 @@ window.onload = function() {
         if (currentSongIndex >= songs.length) {
             currentSongIndex = 0; // Loop back to the first song
         }
-        playSong(songs[currentSongIndex].file, songs[currentSongIndex].name); // Play the next song and update the display
+        playSong(songs[currentSongIndex].file, songs[currentSongIndex].name); 
     });
 };
 
