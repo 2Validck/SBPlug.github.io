@@ -502,6 +502,12 @@ nav a:hover {
     color: white;
 }
 
+.order-form #notice{
+    text-align: center;
+    color: white;
+}
+
+
 .order-form label {
     color: white;
     margin-bottom: 5px;
