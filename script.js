@@ -18,15 +18,15 @@ let currentSongIndex = 0;
 
 // List of songs and their names
 const songs = [
-    { file: 'song9.mp3', name: '4100 One Mic Cypher - KR, Jenn Carter, Jah Woo' },
-    { file: 'song1.mp3', name: '48 - Relly Gunz' },
-    { file: 'song2.mp3', name: 'Breakin the Code - KR' },
-    { file: 'song3.mp3', name: 'Face of the What - Sha EK' },
-    { file: 'song4.mp3', name: 'Notti Bop - 41' },
-    { file: 'song5.mp3', name: 'Savior - NottiWorldRecords' },
-    { file: 'song6.mp3', name: 'See Red - Tata' },
-    { file: 'song7.mp3', name: 'Touch the Ground - Sha Ek' },
-    { file: 'song8.mp3', name: 'Many Men - Lee Drilly' },
+    { file: '/Audios/song9.mp3', name: '4100 One Mic Cypher - KR, Jenn Carter, Jah Woo' },
+    { file: '/Audios/song1.mp3', name: '48 - Relly Gunz' },
+    { file: '/Audios/song2.mp3', name: 'Breakin the Code - KR' },
+    { file: '/Audios/song3.mp3', name: 'Face of the What - Sha EK' },
+    { file: '/Audios/song4.mp3', name: 'Notti Bop - 41' },
+    { file: '/Audios/song5.mp3', name: 'Savior - NottiWorldRecords' },
+    { file: '/Audios/song6.mp3', name: 'See Red - Tata' },
+    { file: '/Audios/song7.mp3', name: 'Touch the Ground - Sha Ek' },
+    { file: '/Audios/song8.mp3', name: 'Many Men - Lee Drilly' },
     
 
 ];
