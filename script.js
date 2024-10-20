@@ -143,7 +143,7 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
                         inline: true
                     },
                     {
-                        name: "Offer",
+                        name: "What they want:",
                         value: offer,
                         inline: false
                     }
