@@ -115,3 +115,67 @@ document.getElementById('feedback-form').addEventListener('submit', function (e)
         document.getElementById('feedback-status').textContent = 'Error: ' + error.message;
     });
 });
+
+
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get input values
+    const robloxUser = document.getElementById('robloxUser').value;
+    const discordUser = document.getElementById('discordUser').value;
+    const offer = document.getElementById('offer').value;
+
+    // Construct the embed message to be sent via webhook
+    const embed = {
+        embeds: [
+            {
+                title: "New Order Received",
+                color: 15158332,
+                fields: [
+                    {
+                        name: "Roblox Username",
+                        value: robloxUser,
+                        inline: true
+                    },
+                    {
+                        name: "Discord Username",
+                        value: discordUser,
+                        inline: true
+                    },
+                    {
+                        name: "Offer",
+                        value: offer,
+                        inline: false
+                    }
+                ],
+                timestamp: new Date(),
+                footer: {
+                    text: "South Bronx's Plug"
+                }
+            }
+        ]
+    };
+
+    
+    const webhookURL = 'https://discord.com/api/webhooks/1297482321980821584/tBQpy3f5ibWLkeqbhdMTJnMiFVKBuKHCHyczz4RI3hwNQbwy0FmQCG5JqthF4Xv0mtTj';
+
+    // Send the data using the webhook
+    fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(embed),
+    }).then(response => {
+        if (response.ok) {
+            document.getElementById('orderMessage').textContent = 'Order placed successfully!';
+        } else {
+            document.getElementById('orderMessage').textContent = 'Failed to place the order. Please try again.';
+            document.getElementById('orderMessage').style.color = 'red';
+        }
+    }).catch(error => {
+        document.getElementById('orderMessage').textContent = 'Error placing order: ' + error;
+        document.getElementById('orderMessage').style.color = 'red';
+    });
+});
+
