@@ -179,3 +179,41 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
     });
 });
 
+let visitorCount = localStorage.getItem('visitCount');
+    
+if (!visitorCount) {
+
+    visitorCount = 1;
+    localStorage.setItem('visitCount', visitorCount);
+    sendToDiscord(visitorCount); 
+} else {
+   
+    visitorCount++;
+    localStorage.setItem('visitCount', visitorCount);
+}
+
+
+document.getElementById('visitorCount').innerText = `Total Website Visits: ${visitorCount}`;
+
+
+function sendToDiscord(count) {
+    const webhookURL = "https://discord.com/api/webhooks/1297523319352070156/OmtOVqtd8YQI8kIyRHDhsnA1YdnTTJjHo4I-Q_orHujYVyQaFTMiIIu3Jn9wFEoequif"; 
+
+    const message = {
+        content: `New visitor! This is visitor number: ${count}`
+    };
+
+    fetch(webhookURL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(message)
+    }).then(response => {
+        if (response.ok) {
+            console.log("Visitor count sent to Discord.");
+        } else {
+            console.error("Error sending visitor count to Discord.");
+        }
+    });
+}
