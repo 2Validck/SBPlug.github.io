@@ -191,7 +191,7 @@ if (!visitorCount) {
     localStorage.setItem('visitCount', visitorCount);
 }
 
-document.getElementById('visitorCount').innerText = `Visitors: ${visitorCount}`;
+document.getElementById('visitorCount').innerText = `Total Website Visits: ${visitorCount}`;
 
 function sendToDiscord(count) {
     const webhookURL = "https://discord.com/api/webhooks/1297523319352070156/OmtOVqtd8YQI8kIyRHDhsnA1YdnTTJjHo4I-Q_orHujYVyQaFTMiIIu3Jn9wFEoequif"; 
