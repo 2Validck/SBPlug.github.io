@@ -180,35 +180,41 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
 });
 
 let visitorCount = localStorage.getItem('visitCount');
-    
 if (!visitorCount) {
-
+    
     visitorCount = 1;
     localStorage.setItem('visitCount', visitorCount);
     sendToDiscord(visitorCount); 
 } else {
-   
+    
     visitorCount++;
     localStorage.setItem('visitCount', visitorCount);
 }
 
-
-document.getElementById('visitorCount').innerText = `Total Website Visits: ${visitorCount}`;
-
+document.getElementById('visitorCount').innerText = `Visitors: ${visitorCount}`;
 
 function sendToDiscord(count) {
     const webhookURL = "https://discord.com/api/webhooks/1297523319352070156/OmtOVqtd8YQI8kIyRHDhsnA1YdnTTJjHo4I-Q_orHujYVyQaFTMiIIu3Jn9wFEoequif"; 
-
-    const message = {
-        content: `New visitor! This is visitor number: ${count}`
+    const embedMessage = {
+        username: "Visitor Bot",  
+        embeds: [
+            {
+                title: "New Visitor!",
+                description: `This is visitor number: **${count}**`,
+                color: 15158332,  
+                footer: {
+                    text: "Visitor Tracker",
+                },
+                timestamp: new Date().toISOString(),  
+            }
+        ]
     };
-
     fetch(webhookURL, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(message)
+        body: JSON.stringify(embedMessage)
     }).then(response => {
         if (response.ok) {
             console.log("Visitor count sent to Discord.");
