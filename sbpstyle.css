@@ -430,6 +430,13 @@ nav a:hover {
     
 }
 
+#feedback-form input, textarea{
+    text-align: center;
+
+}
+
+
+
 #feedback-form input,
 #feedback-form textarea {
     width: 30%;
@@ -438,6 +445,7 @@ nav a:hover {
     border-radius: 5px;
     border: none;
     resize: none;
+    
 }
 
 #feedback-form button {
@@ -463,10 +471,72 @@ nav a:hover {
 
 .hero-content #mail {
     color: #b82930;                     
-    text-decoration: none;             
-    transition: color 0.3s;             
+    text-decoration: none;              /* Remove underline from links */
+    transition: color 0.3s;             /* Smooth transition for hover effect */
 }
 
 .hero-content #mail:hover {
     color: #d72a2a;                     
+}
+
+
+
+.order-form {
+    background: #33333331;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+
+.order-form form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.order-form h2{
+    text-align: center;
+    color: white;
+}
+
+.order-form label {
+    color: white;
+    margin-bottom: 5px;
+    font-weight: bold;
+    
+}
+
+
+
+
+.order-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: #4343434e;
+    box-shadow: 0 0 20px black;
+    
+}
+
+.order-form button {
+    padding: 10px;
+    background-color: #b82930;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+button:hover {
+    background-color: #d72a2a;
 }
