@@ -15,6 +15,7 @@
             <a href="#about" class="scroll-link">About</a>
             <a href="#services" class="scroll-link">Services</a>
             <a href="#stock" class="scroll-link">Stock</a>
+            <a href="#order" class="scroll-link">Order</a>
             
         </nav>
         <h1 id="welcome">South Bronx's Plugs</h2>
@@ -56,33 +57,26 @@
 
 
         
-
-
-
-        <section id="stock" class="stock-section">
-            <h2>Latest Stock</h2>
-            <p>Keep in mind these are IN-GAME items for SB!</p>
-            <div class="stock-grid">
-                <div class="stock-item">
-                    <img src="Images/57.webp" alt="Product 1">
-                    <h3>Five-Seven</h3>
-                    <p>$ No price set</p>
-                    <p>Seller: Vex</p>
-                </div>
-                <div class="stock-item">
-                    <img src="Images/taurusgc2.jpeg" alt="Product 2">
-                    <h3>Taurus GC2</h3>
-                    <p>$ No price set</p>
-                    <p>Seller: Denis</p>
-                </div>
-                <div class="stock-item">
-                    <img src="Images/glockbeam.webp" alt="Product 3">
-                    <h3>Glock Beam</h3>
-                    <p>$ No price set</p>
-                    <p>Seller: Denis</p>
-                </div>
-            </div>
+    <section class="order-form" id="order">
+            <h2>Place Your Order</h2>
+            <p></p>
+            <form id="orderForm">
+                <label for="robloxUser">Roblox Username:</label>
+                <input type="text" id="robloxUser" name="robloxUser" required ><br>
+                
+                <label for="discordUser">Discord Username:</label>
+                <input type="text" id="discordUser" name="discordUser" required><br>
+                
+                <label for="offer">What you need:</label>
+                <input type="text" id="offer" name="offer" required><br>
+                
+                <button type="submit">Place Order</button>
+            </form>
+            <p id="orderMessage" style="color: #b82930; font-weight: bold;"></p>
         </section>
+
+
+        
         
         
 
@@ -132,6 +126,31 @@
 
             </div>
         </footer>
+
+        <section id="stock" class="stock-section">
+            <h2>Latest Stock</h2>
+            <p>Keep in mind these are IN-GAME items for SB!</p>
+            <div class="stock-grid">
+                <div class="stock-item">
+                    <img src="Images/57.webp" alt="Product 1">
+                    <h3>Five-Seven</h3>
+                    <p>$ No price set</p>
+                    <p>Seller: Vex</p>
+                </div>
+                <div class="stock-item">
+                    <img src="Images/taurusgc2.jpeg" alt="Product 2">
+                    <h3>Taurus GC2</h3>
+                    <p>$ No price set</p>
+                    <p>Seller: Denis</p>
+                </div>
+                <div class="stock-item">
+                    <img src="Images/glockbeam.webp" alt="Product 3">
+                    <h3>Glock Beam</h3>
+                    <p>$ No price set</p>
+                    <p>Seller: Denis</p>
+                </div>
+            </div>
+        </section>
 
         <section class="feedback">
             <h2>Leave a Review</h2>
